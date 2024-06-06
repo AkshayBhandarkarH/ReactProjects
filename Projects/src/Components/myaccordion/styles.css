@@ -5,6 +5,17 @@
   justify-content: center;
   align-items: center;
   background-color: chocolate;
+  flex-direction: column;
+  gap: 20px;
+}
+.wrapper button {
+  padding: 10px 20px;
+  background-color: #614101;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 .accordian {
   width: 500px;
@@ -13,6 +24,7 @@
   background: #614101;
   margin-bottom: 10px;
   padding: 10px 20px;
+  border-radius: 5px;
 }
 .title {
   color: #ffffffff;
