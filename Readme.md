@@ -14,4 +14,4 @@ Other Installations:
   ->Include required links from Bootstrap docs within Head for bootstrap css and script for body tag.
   
   React Router:
-    npm i react-router-dom
+   -> npm i react-router-dom
