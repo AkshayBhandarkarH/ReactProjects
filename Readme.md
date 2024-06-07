@@ -10,7 +10,8 @@ Steps to Follow:
 Other Installations:
   For Bootstrap:
   npm i bootstrap
-  Include required links from Bootstrap docs within Head for bootstrap css and script for body tag.
+
+  ->Include required links from Bootstrap docs within Head for bootstrap css and script for body tag.
   
   React Router:
     npm i react-router-dom
