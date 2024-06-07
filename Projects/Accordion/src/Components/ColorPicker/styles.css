@@ -2,13 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  padding: 20px;
 }
-.colorButton {
+#colorButton {
   padding: 10px;
   background-color: black;
   color: white;
+  margin: 1rem;
 }
 
 .clrpalette {
