@@ -9,7 +9,7 @@ function LoadData() {
   async function fetchProduct() {
     setLoading(true);
     try {
-      const response = await fetch(`https://dummyjson.com/products?limit=10&skip=${count * 20}`);
+      const response = await fetch(`https://dummyjson.com/products?limit=10&skip=${count * 10}`);
       const result = await response.json();
       if (result && result.products) {
         setProducts((prevproducts) => [...prevproducts, ...result.products]);

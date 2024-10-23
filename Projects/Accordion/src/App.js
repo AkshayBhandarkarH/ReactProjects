@@ -7,9 +7,9 @@ import LoadData from "./Components/loadMoreData/LoadData";
 function App() {
   return (
     <div className="App">
-      {/* <Accordion />
+      <Accordion />
       <ColorPicker />
-      <StarRating /> */}
+      <StarRating />
       <LoadData />
     </div>
   );

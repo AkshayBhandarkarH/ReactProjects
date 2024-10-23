@@ -1,0 +1,24 @@
+.searchbox {
+  text-align: center;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px auto;
+}
+.map {
+  padding: 1rem;
+
+  height: 400px;
+  width: 500px;
+  background-color: greenyellow;
+}
+.WeatherInfo {
+  padding: 1rem;
+  height: 400px;
+  width: 500px;
+  background-color: greenyellow;
+}
