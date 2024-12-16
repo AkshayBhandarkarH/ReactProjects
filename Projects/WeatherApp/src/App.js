@@ -4,10 +4,9 @@ import Searchbox from "./searchbox";
 // import Gmap from "./Map";
 function App() {
   return (
-    <>
-      {/* <Gmap /> */}
+    <div className="bg-dark h-100vh">
       <Searchbox />
-    </>
+    </div>
   );
 }
 

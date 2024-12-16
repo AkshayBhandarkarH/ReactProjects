@@ -11,6 +11,7 @@ import Gmap from "./Map";
 function Searchbox() {
   let [city, setCity] = useState("Bangalore");
   let [weatherData, setWeatherData] = useState([]);
+
   const API_URL = "https://api.openweathermap.org/data/2.5/weather";
   const API_Key = "e68085b833faab6a5a00fd4e1d3fef30";
 
@@ -59,50 +60,65 @@ function Searchbox() {
       backgroundColor: "#1A2027",
     }),
   }));
+
   return (
     <div>
       <div className="searchbox">
-        <h3>Search for their weather and location</h3>
-        <form onSubmit={handleSubmit}>
-          <TextField id="city" value={city} variant="outlined" onChange={handleChange} className="input" />
-          <br />
-          <br />
-          <Button variant="contained" type="submit">
-            Search
-          </Button>
-        </form>
+        <h3 className="py-4">Weather App</h3>
+        <div className="d-flex justify-content-center align-items-center ">
+          <div>
+            <form onSubmit={handleSubmit} className="bg-success p-2 rounded">
+              <TextField
+                id="city"
+                value={city}
+                label="Add locations"
+                className="input pe-3 text-dark  "
+                onChange={handleChange}
+                sx={{
+                  input: {
+                    color: "white",
+                  },
+                }}
+              />
+              <Button type="submit" className="text-dark bg-secondary mt-2 ">
+                Search
+              </Button>
+            </form>
+          </div>
+          <div></div>
+        </div>
       </div>
       <div className="container">
         <div className="map">
           <Gmap lat={weatherData.lat} lng={weatherData.lon}></Gmap>
         </div>
-        <div>
+        <div className="weatherData">
           {weatherData && (
-            <div className="WeatherInfo">
-              <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <div className="WeatherInfo d-flex">
+              <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
                 <Grid item xs={6}>
-                  <Item>Temparature</Item>
+                  <Item className="text-dark border rounded border-secondary ">Temparature</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>{weatherData.temparature} °C</Item>
+                  <Item className="text-dark border rounded border-secondary ">{weatherData.temparature} °C</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>Max temp</Item>
+                  <Item className="text-dark border rounded border-secondary ">Max temp</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>{weatherData.MaxTemp} °C</Item>
+                  <Item className="text-dark border rounded border-secondary ">{weatherData.MaxTemp} °C</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>Min temp</Item>
+                  <Item className="text-dark border rounded border-secondary ">Min temp</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>{weatherData.MinTemp} °C</Item>
+                  <Item className="text-dark border rounded border-secondary ">{weatherData.MinTemp} °C</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>Humidity</Item>
+                  <Item className="text-dark border rounded border-secondary ">Humidity</Item>
                 </Grid>
                 <Grid item xs={6}>
-                  <Item>{weatherData.hum} %</Item>
+                  <Item className="text-dark border rounded border-secondary ">{weatherData.hum} %</Item>
                 </Grid>
               </Grid>
             </div>
