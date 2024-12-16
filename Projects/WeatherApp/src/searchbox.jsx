@@ -80,7 +80,7 @@ function Searchbox() {
                   },
                 }}
               />
-              <Button type="submit" className="text-dark bg-secondary mt-2 ">
+              <Button type="submit" className="text-light bg-dark mt-2 ">
                 Search
               </Button>
             </form>
