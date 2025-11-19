@@ -29,24 +29,24 @@ function Register() {
       })
       .catch((error) => console.error("Error sending data:", error));
   };
-  const handleClick = () => {
-    axios
-      .get("http://127.0.0.1:5000/api/data")
-      .then((response) => {
-        const users = response.data;
-        const matchedUser = users.find((user) => user.username === info.username && user.email === info.email && user.password === info.password);
-        if (matchedUser) {
-          navigate("/User");
-        } else {
-          console.error("Invalid credentials");
-          alert("Invalid username, email, or password.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        alert("Error while connecting to the server. Please try again later.");
-      });
-  };
+  // const handleClick = () => {
+  //   axios
+  //     .get("http://127.0.0.1:5000/api/data")
+  //     .then((response) => {
+  //       const users = response.data;
+  //       const matchedUser = users.find((user) => user.username === info.username && user.email === info.email && user.password === info.password);
+  //       if (matchedUser) {
+  //         navigate("/User");
+  //       } else {
+  //         console.error("Invalid credentials");
+  //         alert("Invalid username, email, or password.");
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //       alert("Error while connecting to the server. Please try again later.");
+  //     });
+  // };
 
   return (
     <div>
@@ -57,9 +57,6 @@ function Register() {
         <input type="password" name="password" value={info.password} placeholder="Enter password" onChange={handleChange}></input>
         <button type="submit">Submit</button>
       </form>
-      <button type="button" onClick={handleClick}>
-        Login
-      </button>
     </div>
   );
 }

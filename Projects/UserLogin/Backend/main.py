@@ -35,7 +35,6 @@ def get_data():
 @cross_origin(supports_credentials=True)
 def post_data():
     # data = request.get_json()
-    
     # print("Received data:", data)  # For debugging
     # return jsonify({"message": "Data received successfully", "data": data}),201
     new_data = request.get_json()
@@ -44,7 +43,7 @@ def post_data():
     sql.SQL("")
     insert_query = sql.SQL("""
                     INSERT INTO users (username, email, password) 
-                    VALUES (%s, %s, %s)
+                    VALUES (%s, %s, %s) 
                 """)
 
     cursor.execute(insert_query, (new_data['username'], new_data['email'],new_data['password']))
